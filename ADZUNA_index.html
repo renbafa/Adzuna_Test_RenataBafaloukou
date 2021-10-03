@@ -1,0 +1,79 @@
+<!Everything about the front page, name, email, notes and the button, will be coded in this file, but their actions will not be coded in this file>
+<!DOCTYPE html>
+<html>
+    <!Code is separated by head and body, all within html>
+    <head>
+        <!Use viewport and set the content of the web page so that everything fits perfectly in the screen>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!Allude to stylesheet and script so that website works and looks well>
+        <link rel= "stylesheet" href="ADZUNA_index.css">
+        <script src= "ADZUNA_index.js"></script>
+        <title> Adzuna Frontend Developer Test </title>
+    </head>
+
+    <!Body includes the wrapper>
+    <body>
+        <!Wrapper includes the header (h1), the error message and the form>
+        <div class= "wrapper" id= "wrapper">
+            <h1> ADZUNA FRONTEND DEVELOPER TEST FORM</h1>
+            <div id="message_error"></div>
+            <!Form is where all the rows are created and assigned characteristics>
+            <!once form is submitted, the check function (from script) will be ran and return True of False>
+            <form id= "form" onsubmit="return check();">
+                
+                <!First div row, where full name should be inserted and is required>
+                <div class= "row">
+                    <label for= "full_name"> Full Name </label> 
+                    <div>
+                        <input
+                            type="text"
+                            id="name"
+                            name="full_name"
+                            placeholder="Input your full name"
+                            required
+                        />
+                    </div>
+                </div>
+                <!br used to give some space in between each row>
+                <br>
+                <!Second div row, where email should be inserted and again is required for the submission to work>
+                <div class="row">
+                    <label for="email"> Email </label>
+                    <div>
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="Input your full email"
+                            required
+                        />
+                    </div>
+                </div>
+                <br>
+                <!Final div row, where notes can be included>
+                <div class="row">
+                    <label for="notes"> Notes </label>
+                    <div>
+                        <textarea
+                            id="notes"
+                            name="notes"
+                            placeholder="Input notes you would like us to see"
+                        ></textarea>
+                    </div>
+                </div>
+                <!Submission button, which is the end of the form and triggers the "onsubmit" button to call the check function>
+                <div class="row" id= "btn">
+                    <input type="submit" value="Submit"/>
+                </div>
+                <!Made by me!>
+                <div class= "credits" id= "credits"> 
+                    Made by Renata Bafaloukou
+                    <br>
+                    <br>
+                    2021 Adzuna Assessment
+                </div>
+
+            </form>
+        </div>
+    </body>
+</html>
